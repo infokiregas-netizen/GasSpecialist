@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https:
+    <style>
+      :root { --brand: #1a2a44; }
+      body { background: #f0f0f0; font-family: sans-serif; display: flex; justify-content: center; padding: 20px; }
+      .card { background: white; width: 100%; max-width: 350px; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+      .logo { width: 100px; margin-bottom: 10px; }
+      .btn { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--brand); color: white; padding: 12px; margin: 8px 0; text-decoration: none; border-radius: 10px; font-weight: bold; }
+      .wa { background: #25d366; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="logo.png" class="logo">
+      <h1>Erik Pienaar</h1>
+      <p>Gas Specialist</p>
+      <a href="tel:27154952815" class="btn"><i class="fas fa-phone"></i> Office</a>
+      <a href="tel:27838753383" class="btn"><i class="fas fa-mobile-alt"></i> Mobile</a>
+      <a href="https://wa.me/27647036747" class="btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:erik@gasspecialist.co.za" class="btn"><i class="fas fa-envelope"></i> Email</a>
+      <a href="www.gasspecialist.co.za" class="btn"><i class="fas fa-globe"></i> Website</a>
+      <button onclick="saveContact()" class="btn" style="width:100%; border:none; cursor:pointer;">Save Contact</button>
+    </div>
+    <script>
+      function saveContact() {
+        const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:Erik Pienaar\nORG:Gas Specialist\nTEL;TYPE=WORK:27154952815\nTEL;TYPE=CELL:27838753383\nADR:;;14 Maroela ave, Polokwane\nEMAIL:erik@gasspecialist.co.za\nURL:www.gasspecialist.co.za\nEND:VCARD";
+        const blob = new Blob([vcard], { type: "text/vcard" });
+        const a = document.createElement("a");
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "Erik Pienaar.vcf";
+        a.click();
+      }
+    </script>
+  </body>
+  </html>
