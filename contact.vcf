@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Erik Pienaar
+ORG:Gas Specialist
+TEL;TYPE=WORK,VOICE:0154951528
+TEL;TYPE=CELL,VOICE:0838753383
+TEL;TYPE=CELL,VOICE:0647036747
+EMAIL:info@gasspecialist.co.za
+URL:https://gasspecialist.co.za
+ADR;TYPE=WORK:;;14 Maroela ave;Polokwane;;0700;South Africa
+PHOTO;VALUE=URL:https://gasspecialist.co.za/wp-content/uploads/2021/06/Gas-Specialist-Logo-1.png
+END:VCARD
